@@ -14,7 +14,8 @@ function Home() {
       if (res.status === 200) {
         let newBlogs = []
         newBlogs = res?.data?.filter((e) => e.active_flag)
-        setBlogs(newBlogs)
+        const latestBlogs = newBlogs.reverse()
+          setBlogs(latestBlogs)
       }
     } catch (error) {
       alert(error)
@@ -44,4 +45,15 @@ function BlogItem({ blog }) {
     <img src= {blog.imageUrl} alt='' className='blog-image'/>
     <div className='blog-description'>{blog.description}</div>
   </div>
+  // return <>
+  //   <figure className='Card-wraper'>
+  //     <img src={blog.imageUrl} alt='' className='Card-image' />
+  //     <figcaption className='Card-body'>
+  //     <div>
+  //       <div className='Card-category'>{blog.title}</div>
+  //       <div className='blog-description'>{blog.description}</div>
+  //     </div>
+  //     </figcaption>
+  //   </figure >
+  // </>
 }

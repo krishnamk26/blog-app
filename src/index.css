@@ -106,3 +106,42 @@
     width: 100%;
     top:0;
   }
+  .Card-wraper{
+    position: relative;
+    isolation: isolate;
+    margin: auto;
+    width: 425px;
+    height: 225px;
+    background-color: #000;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  .Card-image{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 20%;
+    border-radius: inherit;
+    transition: transform 250ms;
+  }
+  .Card-wraper:hover .Card-image{
+    transform: translateY(-112px) scale(0.75);
+  }
+  .Card-body{
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 24px;
+    color: #f4c644;
+  }
+  .Card-category{
+    color: #fff;
+  }
+
+  .error{
+    color: red;
+  }

@@ -95,11 +95,11 @@ function Image({ imageUrl }) {
     </>
 }
 
-function Description({ content }) {
+function Description({ content}) {
     return <>
         <div>
             <div className='description'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus minima optio cupiditate nostrum, quia necessitatibus ipsum in tempore dolor,
+            {content}
             </div>
         </div>
     </>
